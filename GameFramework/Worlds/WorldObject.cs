@@ -21,7 +21,7 @@ namespace GameFramework.Worlds
 
         public override string ToString()
         {
-            return $"{{{nameof(Name)}={Name}, {nameof(Lootable)}={Lootable}, {nameof(Removeable)}={Removeable}}}";
+            return $"{{{nameof(Name)}={Name}, {nameof(Lootable)}={Lootable.ToString()}, {nameof(Removeable)}={Removeable.ToString()}}}";
         }
     }"
         }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+using GameFramework.Models.Creatures;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,5 +15,17 @@ namespace GameFramework.Worlds
 
         private List<WorldObject> _worldObjects;
         private List<Creature> _creatures;
+
+        public World(int maxX, int maxY)
+        {
+            MaxX = maxX;
+            MaxY = maxY;
+            _worldObjects = new List<WorldObject>();
+            _creatures = new List<Creature>();
+        }
+        public override string ToString()
+        {
+            return $"{{{nameof(MaxX)}={MaxX.ToString()}, {nameof(MaxY)}={MaxY.ToString()}}}";
+        }
     }
 }

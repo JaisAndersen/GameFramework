@@ -23,7 +23,5 @@ namespace GameFramework.Worlds
         {
             return $"{{{nameof(Name)}={Name}, {nameof(Lootable)}={Lootable.ToString()}, {nameof(Removeable)}={Removeable.ToString()}}}";
         }
-    }"
-        }
     }
 }

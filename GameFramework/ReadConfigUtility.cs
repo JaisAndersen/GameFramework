@@ -28,10 +28,10 @@ namespace GameFramework
                 config.MaxY = Convert.ToInt32(maxYNode.InnerText.Trim());
             }
 
-            XmlNode? dificultyNode = xmlDocument.DocumentElement?.SelectSingleNode("Dificulty");
-            if (dificultyNode != null)
+            XmlNode? difficultyNode = xmlDocument.DocumentElement?.SelectSingleNode("Dificulty");
+            if (difficultyNode != null)
             {
-                config.Dificulty = (Dificulty)Enum.Parse(typeof(Dificulty), dificultyNode.InnerText.Trim());
+                config.Difficulty = (Difficulty)Enum.Parse(typeof(Difficulty), difficultyNode.InnerText.Trim());
             }
 
             return config;

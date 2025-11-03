@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameFramework
 {
-    public enum Dificulty
+    public enum Difficulty
     {
         Easy,
         Medium,

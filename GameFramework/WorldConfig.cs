@@ -13,13 +13,13 @@ namespace GameFramework
 
         public int MaxX { get; set; }
         public int MaxY { get; set; }
-        public Dificulty Dificulty { get; set; }
+        public Difficulty Difficulty { get; set; }
 
         private WorldConfig()
         {
             MaxX = 20;
             MaxY = 20;
-            Dificulty = Dificulty.Medium;
+            Difficulty = Difficulty.Medium;
         }
     }
 }

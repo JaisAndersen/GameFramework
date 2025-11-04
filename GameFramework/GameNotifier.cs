@@ -9,9 +9,17 @@ namespace GameFramework
 {
     public class GameNotifier : IGameNotifier
     {
+        private IGameObserver _observer;
+
+        public GameNotifier(IGameObserver observer)
+        {
+            _observer = observer;
+        }
+
         public void Update(string hitStatus)
         {
-            Console.WriteLine($"GameNotifier received update: {hitStatus}");
+            _observer.Notify(hitStatus);
+            GameFrameworkLogger.Instance.LogInformation($"GameNotifier received update: {hitStatus}");
         }
     }
 }

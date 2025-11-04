@@ -10,19 +10,22 @@ namespace GameFramework
     public class GameObservers : IGameObserver
     {
         private List<IGameObserver> _observers = new List<IGameObserver>();
-        public void Attach(IGameNotifier observer)
+        public void Attach(IGameObserver observer)
         {
-            throw new NotImplementedException();
+            _observers.Add(observer);
         }
 
-        public void Detach(IGameNotifier observer)
+        public void Detach(IGameObserver observer)
         {
-            throw new NotImplementedException();
+            _observers.Remove(observer);
         }
 
         public void Notify(string hitStatus)
         {
-            throw new NotImplementedException();
+            foreach (var observer in _observers)
+            {
+                observer.Notify(hitStatus);
+            }
         }
     }
 }

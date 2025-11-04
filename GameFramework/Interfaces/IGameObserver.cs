@@ -8,8 +8,8 @@ namespace GameFramework.Interfaces
 {
     public interface IGameObserver
     {
-        public void Attach(IGameNotifier observer);
-        public void Detach(IGameNotifier observer);
+        public void Attach(IGameObserver observer);
+        public void Detach(IGameObserver observer);
         public void Notify(string hitStatus);
     }
 }

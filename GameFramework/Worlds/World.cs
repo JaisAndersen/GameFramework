@@ -1,4 +1,4 @@
-﻿
+﻿using GameFramework.Interfaces;
 using GameFramework.Models.Creatures;
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace GameFramework.Worlds
 {
-    public class World
+    public class World : IWorld
     {
         public int MaxX { get; set; }
         public int MaxY { get; set; }

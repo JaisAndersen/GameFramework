@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace GameFramework.Models.Creatures
 {
-    public class Creature
+    public abstract class Creature
     {
         public string Name { get; set; }
         public int hitPoint { get; set; }
@@ -26,19 +26,11 @@ namespace GameFramework.Models.Creatures
             Defence = null;
         }
 
-        public int Hit()
-        {
-            throw new NotImplementedException();
-        }
+        public abstract void Hit();        
 
-        public void RecieveHit(int hit)
-        {
-            throw new NotImplementedException();
-        }
-        public void Loot (WorldObject worldObject)
-        {
-            throw new NotImplementedException();
-        }
+        public abstract void RecieveHit(int hit);
+
+        public abstract void Loot(WorldObject worldObject);
 
         public override string ToString()
         {

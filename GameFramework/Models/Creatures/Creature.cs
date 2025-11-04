@@ -1,4 +1,5 @@
-﻿using GameFramework.Models.Attack;
+﻿using GameFramework.Interfaces;
+using GameFramework.Models.Attack;
 using GameFramework.Models.Defence;
 using GameFramework.Worlds;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace GameFramework.Models.Creatures
 {
-    public abstract class Creature
+    public abstract class Creature : ICreature
     {
         public string Name { get; set; }
         public int hitPoint { get; set; }
@@ -26,7 +27,7 @@ namespace GameFramework.Models.Creatures
             Defence = null;
         }
 
-        public abstract void Hit();        
+        public abstract void Hit();
 
         public abstract void RecieveHit(int hit);
 

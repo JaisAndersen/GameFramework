@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 namespace GameFramework.Interfaces
 {
     public interface IAttackItem : IWorldObject
-    {
-        
+    {        
         int Hit { get; set; }
         int Range { get; set; }
 

@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace GameFramework.Interfaces
 {
-    public interface IGameObserver
+    public interface IWorldObject
     {
-        void Attach(IGameObserver observer);
-        void Detach(IGameObserver observer);
-        void Notify(string hitStatus);
+        string Name { get; set; }
+        bool Lootable { get; set; }
+        bool Removeable { get; set; }
+        string ToString();
     }
 }

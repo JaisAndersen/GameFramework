@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameFramework.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GameFramework.Worlds
 {
-    public class WorldObject
+    public class WorldObject : IWorldObject
     {
         public string Name { get; set; }
         public bool Lootable { get; set; }

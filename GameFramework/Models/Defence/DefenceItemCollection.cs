@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameFramework.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,28 +7,38 @@ using System.Threading.Tasks;
 
 namespace GameFramework.Models.Defence
 {
-    public class DefenceItemCollection
-    {  
-        private List<DefenceItem> items;
-        public DefenceItemCollection()
+    public class ItemCollection : IDefenceItem
+    {
+        private List<IDefenceItem> items;
+
+        public int ReduceHitPoint { get; set; }
+        public string Name { get; set; }
+        public bool Lootable { get; set; }
+        public bool Removeable { get; set; }
+
+        public ItemCollection()
         {
-            items = new List<DefenceItem>();
+            items = new List<IDefenceItem>();
         }
-        public void AddItem(DefenceItem item)
+        public void AddItem(IDefenceItem item)
         {
             items.Add(item);
         }
-        public void RemoveItem(DefenceItem item)
+        public void RemoveItem(IDefenceItem item)
         {
             items.Remove(item);
         }
-        public DefenceItem? GetItemByName(string name)
+        public IDefenceItem? GetItemByName(string name)
         {
             return items.FirstOrDefault(i => i.Name == name);
         }
-        public List<DefenceItem> GetAllItems()
+        public List<IDefenceItem> GetAllItems()
         {
-            return new List<DefenceItem>(items);
+            return new List<IDefenceItem>(items);
+        }
+        public override string ToString()
+        {
+            return $"{{{nameof(Name)}={Name}, {nameof(ReduceHitPoint)}={ReduceHitPoint.ToString()}, {nameof(Lootable)}={Lootable.ToString()}, {nameof(Removeable)}={Removeable.ToString()}}}";
         }
     }
 }

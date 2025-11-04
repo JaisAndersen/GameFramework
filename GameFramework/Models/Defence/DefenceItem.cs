@@ -1,4 +1,5 @@
-﻿using GameFramework.Worlds;
+﻿using GameFramework.Interfaces;
+using GameFramework.Worlds;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace GameFramework.Models.Defence
 {
-    public class DefenceItem : WorldObject
+    public class DefenceItem : WorldObject, IDefenceItem
     {
         public int ReduceHitPoint { get; set; }
         public DefenceItem()

@@ -1,4 +1,5 @@
-﻿using GameFramework.Worlds;
+﻿using GameFramework.Interfaces;
+using GameFramework.Worlds;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace GameFramework.Models.Attack
 {
-    public class AttackItem : WorldObject
+    public class AttackItem : WorldObject, IAttackItem
     {
         public string Name { get; set; }
         public int Hit { get; set; }

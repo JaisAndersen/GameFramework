@@ -1,6 +1,7 @@
 ﻿using GameFramework.Interfaces;
 using GameFramework.Models.Attack;
 using GameFramework.Models.Defence;
+using GameFramework.Strategys;
 using GameFramework.Worlds;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,8 @@ namespace GameFramework.Models.Creatures
         public AttackItem? Attack { get; set; }
         public DefenceItem? Defence { get; set; }
 
+        public IRecieveHitStrategy RecieveHitStrategy { get; set; }
+
         public Creature()
         {
             Name = string.Empty;
@@ -25,11 +28,16 @@ namespace GameFramework.Models.Creatures
 
             Attack = null;
             Defence = null;
+
+            RecieveHitStrategy = new DefaultRecieveHitStrategy();
         }
 
         public abstract void Hit();
 
-        public abstract void RecieveHit(int hit);
+        public virtual void RecieveHit(int hit)
+        {
+            RecieveHitStrategy.RecieveHit(this, hit);
+        }
 
         public abstract void Loot(WorldObject worldObject);
 

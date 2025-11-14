@@ -12,9 +12,9 @@ namespace GameFramework.Models.Attack
     /// <summary>
     /// Represents an item that can be used to perform an attack in the game world.
     /// </summary>
-    /// <remarks>The <see cref="AttackItem"/> class provides properties to define the name, hit value, and
+    /// <para>The <see cref="AttackItem"/> class provides properties to define the name, hit value, and
     /// range of the attack item.  It inherits from <see cref="WorldObject"/> and implements the <see
-    /// cref="IAttackItem"/> interface.</remarks>
+    /// cref="IAttackItem"/> interface.</para>
     public class AttackItem : WorldObject, IAttackItem
     {
         public string Name { get; set; }
@@ -23,10 +23,10 @@ namespace GameFramework.Models.Attack
         /// <summary>
         /// Initializes a new instance of the <see cref="AttackItem"/> class with default values.
         /// </summary>
-        /// <remarks>The default values are: <list type="bullet"> <item> <description><see cref="Name"/>
+        /// <para>The default values are: <list type="bullet"> <item> <description><see cref="Name"/>
         /// is initialized to an empty string.</description> </item> <item> <description><see cref="Hit"/> is
         /// initialized to 0.</description> </item> <item> <description><see cref="Range"/> is initialized to
-        /// 0.</description> </item> </list></remarks>
+        /// 0.</description> </item> </list></para>
         public AttackItem()
         {
             Name = string.Empty;

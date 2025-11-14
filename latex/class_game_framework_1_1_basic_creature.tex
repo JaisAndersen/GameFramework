@@ -1,0 +1,90 @@
+\hypertarget{class_game_framework_1_1_basic_creature}{}\section{Game\+Framework.\+Basic\+Creature Class Reference}
+\label{class_game_framework_1_1_basic_creature}\index{Game\+Framework.\+Basic\+Creature@{Game\+Framework.\+Basic\+Creature}}
+
+
+Represents a basic creature in the game world, capable of attacking, defending, and interacting with lootable objects.  
+
+
+Inheritance diagram for Game\+Framework.\+Basic\+Creature\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_game_framework_1_1_basic_creature}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_game_framework_1_1_basic_creature_a7e91de1889abafce0d29ba364d332a3f}{Hit}} ()
+\begin{DoxyCompactList}\small\item\em Executes an attack and calculates the resulting hit value. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_game_framework_1_1_basic_creature_a4de8ad365316d7230eadc5d4af81acfc}{Recieve\+Hit}} (int hit)
+\begin{DoxyCompactList}\small\item\em Processes an incoming hit by reducing the hit points based on the defense value. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_game_framework_1_1_basic_creature_acc5411c7ffc71dc286bd3f8e7ceba057}{Loot}} (\mbox{\hyperlink{class_game_framework_1_1_worlds_1_1_world_object}{World\+Object}} world\+Object)
+\begin{DoxyCompactList}\small\item\em Attempts to loot the specified World\+Object and assigns it to the appropriate category if it is lootable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Represents a basic creature in the game world, capable of attacking, defending, and interacting with lootable objects. 
+
+This class provides fundamental behaviors for a creature, including handling attacks, receiving damage, and looting items. It extends the \mbox{\hyperlink{class_game_framework_1_1_models_1_1_creatures_1_1_creature_a0e6f101f40103a70564088d8b983f0da}{Creature}} class and implements the I\+Basic\+Creature interface.
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_framework_1_1_basic_creature_a7e91de1889abafce0d29ba364d332a3f}\label{class_game_framework_1_1_basic_creature_a7e91de1889abafce0d29ba364d332a3f}} 
+\index{Game\+Framework\+::\+Basic\+Creature@{Game\+Framework\+::\+Basic\+Creature}!Hit@{Hit}}
+\index{Hit@{Hit}!Game\+Framework\+::\+Basic\+Creature@{Game\+Framework\+::\+Basic\+Creature}}
+\subsubsection{\texorpdfstring{Hit()}{Hit()}}
+{\footnotesize\ttfamily override void Game\+Framework.\+Basic\+Creature.\+Hit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Executes an attack and calculates the resulting hit value. 
+
+The hit value is determined by the \mbox{\hyperlink{class_game_framework_1_1_models_1_1_creatures_1_1_creature_affdf3ec0e97b9c8bb87fcc4564a95a0f}{Attack}} property. If \mbox{\hyperlink{class_game_framework_1_1_models_1_1_creatures_1_1_creature_affdf3ec0e97b9c8bb87fcc4564a95a0f}{Attack}} is null, the hit value defaults to 0.
+
+Implements \mbox{\hyperlink{interface_game_framework_1_1_interfaces_1_1_i_basic_creature_ac4f644adbef3ee7dea258e87ce81c3b4}{Game\+Framework.\+Interfaces.\+I\+Basic\+Creature}}.
+
+\mbox{\Hypertarget{class_game_framework_1_1_basic_creature_acc5411c7ffc71dc286bd3f8e7ceba057}\label{class_game_framework_1_1_basic_creature_acc5411c7ffc71dc286bd3f8e7ceba057}} 
+\index{Game\+Framework\+::\+Basic\+Creature@{Game\+Framework\+::\+Basic\+Creature}!Loot@{Loot}}
+\index{Loot@{Loot}!Game\+Framework\+::\+Basic\+Creature@{Game\+Framework\+::\+Basic\+Creature}}
+\subsubsection{\texorpdfstring{Loot()}{Loot()}}
+{\footnotesize\ttfamily override void Game\+Framework.\+Basic\+Creature.\+Loot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_framework_1_1_worlds_1_1_world_object}{World\+Object}}}]{world\+Object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Attempts to loot the specified World\+Object and assigns it to the appropriate category if it is lootable. 
+
+If the {\itshape world\+Object}  is an Attack\+Item, it is assigned to the {\ttfamily Attack} property. If it is a Defence\+Item, it is assigned to the {\ttfamily Defence} property. No action is taken if the object is not lootable or is \mbox{\hyperlink{}{.}} 
+\begin{DoxyParams}{Parameters}
+{\em world\+Object} & The World\+Object to loot. Must not be \mbox{\hyperlink{}{and must be lootable.}} \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_game_framework_1_1_interfaces_1_1_i_basic_creature_affc33946e7686aae7b58770c30f407d0}{Game\+Framework.\+Interfaces.\+I\+Basic\+Creature}}.
+
+\mbox{\Hypertarget{class_game_framework_1_1_basic_creature_a4de8ad365316d7230eadc5d4af81acfc}\label{class_game_framework_1_1_basic_creature_a4de8ad365316d7230eadc5d4af81acfc}} 
+\index{Game\+Framework\+::\+Basic\+Creature@{Game\+Framework\+::\+Basic\+Creature}!Recieve\+Hit@{Recieve\+Hit}}
+\index{Recieve\+Hit@{Recieve\+Hit}!Game\+Framework\+::\+Basic\+Creature@{Game\+Framework\+::\+Basic\+Creature}}
+\subsubsection{\texorpdfstring{Recieve\+Hit()}{RecieveHit()}}
+{\footnotesize\ttfamily override void Game\+Framework.\+Basic\+Creature.\+Recieve\+Hit (\begin{DoxyParamCaption}\item[{int}]{hit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Processes an incoming hit by reducing the hit points based on the defense value. 
+
+The actual damage applied is reduced by the defense value, if available. The hit points are then decreased by the resulting damage, but will not drop below zero.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hit} & The amount of damage to be applied to the entity.\\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_game_framework_1_1_interfaces_1_1_i_basic_creature_aa4d747c2e929d4b1feac24468c23fa6f}{Game\+Framework.\+Interfaces.\+I\+Basic\+Creature}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/jaish/\+Source/\+Repos/\+Game\+Framework\+T/\+Game\+Framework/\mbox{\hyperlink{_basic_creature_8cs}{Basic\+Creature.\+cs}}\end{DoxyCompactItemize}

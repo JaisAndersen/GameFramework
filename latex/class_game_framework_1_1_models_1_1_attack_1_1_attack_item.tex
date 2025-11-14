@@ -1,0 +1,91 @@
+\hypertarget{class_game_framework_1_1_models_1_1_attack_1_1_attack_item}{}\section{Game\+Framework.\+Models.\+Attack.\+Attack\+Item Class Reference}
+\label{class_game_framework_1_1_models_1_1_attack_1_1_attack_item}\index{Game\+Framework.\+Models.\+Attack.\+Attack\+Item@{Game\+Framework.\+Models.\+Attack.\+Attack\+Item}}
+
+
+Represents an item that can be used to perform an attack in the game world.  
+
+
+Inheritance diagram for Game\+Framework.\+Models.\+Attack.\+Attack\+Item\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_game_framework_1_1_models_1_1_attack_1_1_attack_item}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_framework_1_1_models_1_1_attack_1_1_attack_item_a688ab557c4b7a1b763b43e6cd377b187}{Attack\+Item}} ()
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \mbox{\hyperlink{class_game_framework_1_1_models_1_1_attack_1_1_attack_item}{Attack\+Item}} class with default values. \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{class_game_framework_1_1_models_1_1_attack_1_1_attack_item_aa10e26826bbf6121acab5a19c9c95b1d}{To\+String}} ()
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_game_framework_1_1_models_1_1_attack_1_1_attack_item_af7d717313ccc56a1bdf10153aa5c5770}{Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \mbox{\hyperlink{class_game_framework_1_1_models_1_1_attack_1_1_attack_item_aa524359e341b31881b951f480510bdf8}{Hit}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+int \mbox{\hyperlink{class_game_framework_1_1_models_1_1_attack_1_1_attack_item_a775e624a872efe7441ef9d4c8bac912d}{Range}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents an item that can be used to perform an attack in the game world. 
+
+The \mbox{\hyperlink{class_game_framework_1_1_models_1_1_attack_1_1_attack_item}{Attack\+Item}} class provides properties to define the name, hit value, and range of the attack item. It inherits from \mbox{\hyperlink{class_game_framework_1_1_worlds_1_1_world_object_a5283bb1fa85bc4e1d455459839b3b9a7}{World\+Object}} and implements the I\+Attack\+Item interface.
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_game_framework_1_1_models_1_1_attack_1_1_attack_item_a688ab557c4b7a1b763b43e6cd377b187}\label{class_game_framework_1_1_models_1_1_attack_1_1_attack_item_a688ab557c4b7a1b763b43e6cd377b187}} 
+\index{Game\+Framework\+::\+Models\+::\+Attack\+::\+Attack\+Item@{Game\+Framework\+::\+Models\+::\+Attack\+::\+Attack\+Item}!Attack\+Item@{Attack\+Item}}
+\index{Attack\+Item@{Attack\+Item}!Game\+Framework\+::\+Models\+::\+Attack\+::\+Attack\+Item@{Game\+Framework\+::\+Models\+::\+Attack\+::\+Attack\+Item}}
+\subsubsection{\texorpdfstring{Attack\+Item()}{AttackItem()}}
+{\footnotesize\ttfamily Game\+Framework.\+Models.\+Attack.\+Attack\+Item.\+Attack\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \mbox{\hyperlink{class_game_framework_1_1_models_1_1_attack_1_1_attack_item}{Attack\+Item}} class with default values. 
+
+The default values are\+: 
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{class_game_framework_1_1_models_1_1_attack_1_1_attack_item_af7d717313ccc56a1bdf10153aa5c5770}{Name}} is initialized to an empty string.  
+\item \mbox{\hyperlink{class_game_framework_1_1_models_1_1_attack_1_1_attack_item_aa524359e341b31881b951f480510bdf8}{Hit}} is initialized to 0.  
+\item \mbox{\hyperlink{class_game_framework_1_1_models_1_1_attack_1_1_attack_item_a775e624a872efe7441ef9d4c8bac912d}{Range}} is initialized to 0.  
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_framework_1_1_models_1_1_attack_1_1_attack_item_aa10e26826bbf6121acab5a19c9c95b1d}\label{class_game_framework_1_1_models_1_1_attack_1_1_attack_item_aa10e26826bbf6121acab5a19c9c95b1d}} 
+\index{Game\+Framework\+::\+Models\+::\+Attack\+::\+Attack\+Item@{Game\+Framework\+::\+Models\+::\+Attack\+::\+Attack\+Item}!To\+String@{To\+String}}
+\index{To\+String@{To\+String}!Game\+Framework\+::\+Models\+::\+Attack\+::\+Attack\+Item@{Game\+Framework\+::\+Models\+::\+Attack\+::\+Attack\+Item}}
+\subsubsection{\texorpdfstring{To\+String()}{ToString()}}
+{\footnotesize\ttfamily override string Game\+Framework.\+Models.\+Attack.\+Attack\+Item.\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interface_game_framework_1_1_interfaces_1_1_i_attack_item_a1a2fa6d21f73431d90b72e754a06719a}{Game\+Framework.\+Interfaces.\+I\+Attack\+Item}}.
+
+
+
+\subsection{Property Documentation}
+\mbox{\Hypertarget{class_game_framework_1_1_models_1_1_attack_1_1_attack_item_aa524359e341b31881b951f480510bdf8}\label{class_game_framework_1_1_models_1_1_attack_1_1_attack_item_aa524359e341b31881b951f480510bdf8}} 
+\index{Game\+Framework\+::\+Models\+::\+Attack\+::\+Attack\+Item@{Game\+Framework\+::\+Models\+::\+Attack\+::\+Attack\+Item}!Hit@{Hit}}
+\index{Hit@{Hit}!Game\+Framework\+::\+Models\+::\+Attack\+::\+Attack\+Item@{Game\+Framework\+::\+Models\+::\+Attack\+::\+Attack\+Item}}
+\subsubsection{\texorpdfstring{Hit}{Hit}}
+{\footnotesize\ttfamily int Game\+Framework.\+Models.\+Attack.\+Attack\+Item.\+Hit\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_game_framework_1_1_models_1_1_attack_1_1_attack_item_af7d717313ccc56a1bdf10153aa5c5770}\label{class_game_framework_1_1_models_1_1_attack_1_1_attack_item_af7d717313ccc56a1bdf10153aa5c5770}} 
+\index{Game\+Framework\+::\+Models\+::\+Attack\+::\+Attack\+Item@{Game\+Framework\+::\+Models\+::\+Attack\+::\+Attack\+Item}!Name@{Name}}
+\index{Name@{Name}!Game\+Framework\+::\+Models\+::\+Attack\+::\+Attack\+Item@{Game\+Framework\+::\+Models\+::\+Attack\+::\+Attack\+Item}}
+\subsubsection{\texorpdfstring{Name}{Name}}
+{\footnotesize\ttfamily string Game\+Framework.\+Models.\+Attack.\+Attack\+Item.\+Name\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\mbox{\Hypertarget{class_game_framework_1_1_models_1_1_attack_1_1_attack_item_a775e624a872efe7441ef9d4c8bac912d}\label{class_game_framework_1_1_models_1_1_attack_1_1_attack_item_a775e624a872efe7441ef9d4c8bac912d}} 
+\index{Game\+Framework\+::\+Models\+::\+Attack\+::\+Attack\+Item@{Game\+Framework\+::\+Models\+::\+Attack\+::\+Attack\+Item}!Range@{Range}}
+\index{Range@{Range}!Game\+Framework\+::\+Models\+::\+Attack\+::\+Attack\+Item@{Game\+Framework\+::\+Models\+::\+Attack\+::\+Attack\+Item}}
+\subsubsection{\texorpdfstring{Range}{Range}}
+{\footnotesize\ttfamily int Game\+Framework.\+Models.\+Attack.\+Attack\+Item.\+Range\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/jaish/\+Source/\+Repos/\+Game\+Framework\+T/\+Game\+Framework/\+Models/\+Attack/\mbox{\hyperlink{_attack_item_8cs}{Attack\+Item.\+cs}}\end{DoxyCompactItemize}

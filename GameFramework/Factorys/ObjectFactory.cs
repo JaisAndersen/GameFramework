@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GameFramework
+namespace GameFramework.Factorys
 {
     public abstract class ObjectFactory : IObjectFactory
     {

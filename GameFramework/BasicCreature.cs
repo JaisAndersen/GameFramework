@@ -12,17 +12,43 @@ using System.Threading.Tasks;
 
 namespace GameFramework
 {
+    /// <summary>
+    /// Represents a basic creature in the game world, capable of attacking, defending, and interacting with lootable
+    /// objects.
+    /// </summary>
+    /// <remarks>This class provides fundamental behaviors for a creature, including handling attacks,
+    /// receiving damage, and looting items. It extends the <see cref="Creature"/> class and implements the <see
+    /// cref="IBasicCreature"/> interface.</remarks>
     public class BasicCreature : Creature, IBasicCreature
     {
+        /// <summary>
+        /// Executes an attack and calculates the resulting hit value.
+        /// </summary>
+        /// <remarks>The hit value is determined by the <see cref="Attack"/> property. If <see
+        /// cref="Attack"/> is null, the hit value defaults to 0.</remarks>
         public override void Hit()
         {
             var hit = Attack?.Hit ?? 0;
         }
+        /// <summary>
+        /// Processes an incoming hit by reducing the hit points based on the defense value.
+        /// </summary>
+        /// <remarks>The actual damage applied is reduced by the defense value, if available. The hit
+        /// points are then decreased by the resulting damage, but will not drop below zero.</remarks>
+        /// <param name="hit">The amount of damage to be applied to the entity.</param>
         public override void RecieveHit(int hit)
         {
             var reduced = Math.Max(0, hit - (Defence?.ReduceHitPoint ?? 0));
             hitPoint = Math.Max(0, hitPoint - reduced);
         }
+        /// <summary>
+        /// Attempts to loot the specified <see cref="WorldObject"/> and assigns it to the appropriate category if it is
+        /// lootable.
+        /// </summary>
+        /// <remarks>If the <paramref name="worldObject"/> is an <see cref="AttackItem"/>, it is assigned
+        /// to the <c>Attack</c> property. If it is a <see cref="DefenceItem"/>, it is assigned to the <c>Defence</c>
+        /// property. No action is taken if the object is not lootable or is <see langword="null"/>.</remarks>
+        /// <param name="worldObject">The <see cref="WorldObject"/> to loot. Must not be <see langword="null"/> and must be lootable.</param>
         public override void Loot(WorldObject worldObject)
         {
             if (worldObject == null || !worldObject.Lootable) return;

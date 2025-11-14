@@ -9,6 +9,11 @@ namespace GameFramework
 {
     public abstract class ObjectFactory : IObjectFactory
     {
-        
+        public void CreateWorldObjects(IWorldObject worldObject, string name, bool lootable, bool removeable)
+        {
+            worldObject.Name = name;
+            worldObject.Lootable = lootable;
+            worldObject.Removeable = removeable;
+        }
     }
 }

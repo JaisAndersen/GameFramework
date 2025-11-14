@@ -47,8 +47,8 @@ namespace GameFramework
         /// </summary>
         /// <para>If the <paramref name="worldObject"/> is an <see cref="AttackItem"/>, it is assigned
         /// to the <c>Attack</c> property. If it is a <see cref="DefenceItem"/>, it is assigned to the <c>Defence</c>
-        /// property. No action is taken if the object is not lootable or is <see langword="null"/>.</para>
-        /// <param name="worldObject">The <see cref="WorldObject"/> to loot. Must not be <see langword="null"/> and must be lootable.</param>
+        /// property. No action is taken if the object is not lootable or is null.</para>
+        /// <param name="worldObject">The <see cref="WorldObject"/> to loot. Must not be null and must be lootable.</param>
         public override void Loot(WorldObject worldObject)
         {
             if (worldObject == null || !worldObject.Lootable) return;

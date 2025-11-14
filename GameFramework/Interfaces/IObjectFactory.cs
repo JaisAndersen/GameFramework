@@ -8,6 +8,6 @@ namespace GameFramework.Interfaces
 {
     public interface IObjectFactory
     {
-
+        void CreateWorldObjects(IWorldObject worldObject, string name, bool lootable, bool removeable);
     }
 }
